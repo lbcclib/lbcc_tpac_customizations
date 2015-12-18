@@ -1,0 +1,11 @@
+<div id="gold-links-holder">
+    <div id="gold-links">
+        <div id="header-links">
+            <a href="http://library.linnbenton.edu">[% l('Library Home') %]</a>
+            <a href="http://library.linnbenton.edu/content.php?pid=211519&sid=1760511">[% l('Article Databases') %]</a>
+            <a href="http://library.linnbenton.edu/content.php?pid=245376&sid=2026996">[% l('Library Services') %]</a>
+            <a href="http://library.linnbenton.edu/content.php?pid=219108&sid=1819739">[% l('Contact Us!') %]</a>
+            <a href="http://www.linnbenton.edu">[% l('LBCC Home') %]</a>
+        </div>
+    </div>
+</div>

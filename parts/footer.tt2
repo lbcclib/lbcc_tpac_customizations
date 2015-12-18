@@ -1,0 +1,27 @@
+[%- 
+    USE CGI = CGI_utf8;
+    hostname = CGI.url({'-base' => 1});
+-%]
+<div id="footer-wrap">
+<div id="footer">
+    <!-- <a href="[% hostname %]">[% l('Dynamic catalog') %]</a> &nbsp;|&nbsp; -->
+    <a href="http://library.linnbenton.edu">[% l('Library Home') %]</a> &nbsp;|&nbsp;
+    <a href="http://library.linnbenton.edu/content.php?pid=211519&sid=1760511">[% l('Article Databases') %]</a> &nbsp;|&nbsp;
+    <a href="http://library.linnbenton.edu/content.php?pid=245376&sid=2026996">[% l('Library Services') %]</a> &nbsp;|&nbsp;
+    <a href="http://library.linnbenton.edu/content.php?pid=219108&sid=1819739">[% l('Contact Us!') %]</a> &nbsp;|&nbsp;
+    <a href="http://www.linnbenton.edu">[% l('LBCC Home') %]</a>
+
+    <div id="copyright_text" style="margin-top: 2em;">
+        [% l('Copyright &copy; 2006-[_1] Georgia Public Library Service, and others', date.format(date.now, '%Y')) %]
+    </div>
+    <div id="footer_logo">
+        [% l('Powered by') %]
+        <a href="http://evergreen-ils.org">
+            <img src="[% ctx.media_prefix %]/opac/images/eg_tiny_logo.png"
+                style="border:none; width: 94px; height: 16px;"
+                alt="[% l('Evergreen') %]"
+            />
+        </a>
+    </div>
+</div>
+</div>

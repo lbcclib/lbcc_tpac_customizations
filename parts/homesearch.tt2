@@ -1,0 +1,4 @@
+<div id="homesearch_main_logo">
+    <!-- <strong><center><img src="[% ctx.media_prefix %]/opac/images/lbcc_main_logo.gif" /></center></strong> -->
+    <strong><center><img src="[% ctx.media_prefix %]/images/lbcc_main_logo.gif" /></center></strong>
+</div>

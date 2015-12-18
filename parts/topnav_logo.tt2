@@ -1,0 +1,4 @@
+       <!-- <div id="topnav_logo"> <a href="http://evergreen-ils.org"><img alt="[% l('Evergreen Logo') %]" 
+            src="[% ctx.media_prefix %]/opac/images/small_logo.png" /></a></div> -->
+       <div id="topnav_logo"> <a href="http://www.linnbenton.edu"><img alt="[% l('Linn-Benton Community College') %]" 
+            src="[% ctx.media_prefix %]/images/lbcc_small_logo.gif" /></a></div>

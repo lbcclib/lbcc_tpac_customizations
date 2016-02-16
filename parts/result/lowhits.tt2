@@ -4,7 +4,10 @@
             [% INCLUDE "opac/parts/staff_saved_searches.tt2" %]
         </div>
         <div class="zero_search_hits_main">
-            <p>[% qhtml = CGI.param('query') | html;
+            <p>[% qraw = CGI.param('query');
+                  qhtml = qraw | html;
+                  locg = CGI.param('locg');
+
                   IF ctx.bookbag;
 		       wbbag = ctx.bookbag.name | html;
 		       fmt_bookbag = '<span class="lowhits-bookbag-name">' _ wbbag _ '</span>';
@@ -21,7 +24,10 @@
                              l('Please enter a search term in the Search box.');
                           ELSE;
                              l('Sorry, no entries were found for [_1].', '<q>' _ qhtml _ '</q>');
-                             l('<p>Try searching other library materials using <a href="https://libfind.linnbenton.edu:4430/?search_field=all_fields&q=[_1]&show_articles=true"><i>Find It</i></a></p>', CGI.param('query'));
+                             l('<p>Try searching other library materials using <a href="https://libfind.linnbenton.edu:4430/?search_field=all_fields&q=[_1]&show_articles=true"><i>Find It</i></a></p>', qhtml );
+                             IF !locg OR ("1" != locg);
+                                l('<p>Try <a href="results?query=[_1]&locg=1&detail_record_view=1"><i>searching our partner libraries\' collections</i></a></p>', qraw );
+                             END;
                           END;
                        END;
                    END %]

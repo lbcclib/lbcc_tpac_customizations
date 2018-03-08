@@ -1,14 +1,9 @@
 [% IF !ctx.is_staff %]
 <div id="footer-wrap">
 <div id="footer">
-    [% IF ctx.get_org_setting(
-        ctx.physical_loc || ctx.aou_tree.id, 'opac.allow_pending_user') %]
-    <a href="[% mkurl(ctx.opac_root _ '/register') %]">[% 
-        l('Request Library Card') %]</a> &nbsp;|&nbsp;
-    [% ELSE %]
     <div id="footer-links">
+    <a href="home">[% l('New search') %]</a> &nbsp;|&nbsp;
     <a href="advanced">[% l('Advanced search') %]</a> &nbsp;|&nbsp;
-    [% END %]
     <a href="browse">[% l('Browse the catalog') %]</a> &nbsp;|&nbsp;
     <a href="http://linnbenton.edu">[% l('College Web site') %]</a>
     </div>

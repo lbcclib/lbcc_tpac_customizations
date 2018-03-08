@@ -110,7 +110,7 @@
                                             <td class='result_table_pic_header'>
                                                 <a href="[% record_url %]"><img alt="[% l('Book cover') %]"
                                                         name='item_jacket' class='result_table_pic' width="55"
-                                                        src='[% ctx.media_prefix %]/opac/extras/ac/jacket/small/r/[% rec.bre_id | uri %]' /></a><br />
+                                                        src='[% ctx.media_prefix %]/opac/extras/ac/jacket/medium/r/[% rec.bre_id | uri %]' /></a><br />
                                             </td>
                                             <td class='result_table_title_cell' name='result_table_title_cell'>
                                                <div class="result_metadata">

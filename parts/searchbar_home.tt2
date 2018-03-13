@@ -49,7 +49,7 @@ END;
         <!-- New search icon location -->
         <span>
             <input id="detail" type="hidden" name="detail_record_view" value="[% show_detail_view %]"/>
-            <input id='search-submit-go_home' type="submit" value="[% l('🔍') %]" class="opac-button"
+            <input id='search-submit-go_home' type="submit" value="[% l('>') %]" class="opac-button"
                 onclick='setTimeout(function(){$("search-submit-spinner").className=""; $("search-submit-go").className="hidden";[% IF ctx.depth_sel_button AND NOT took_care_of_form %] $("search-submit-go-depth").className="hidden";[% END %]}, 2000)'/>
              [%- IF ctx.depth_sel_button AND NOT took_care_of_form %]
             <!--

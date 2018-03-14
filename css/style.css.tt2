@@ -3089,3 +3089,12 @@ padding: 10px;
 .metarecord_filter_container{float : left;margin-right: 10px;}
 .metarecord_filter_container select{padding: 2px;width: 13em; /* consistent w/ adv search selectors */}
 .metarecord_filter_header{padding-bottom: 5px;}
+
+#titleRow {
+  line-height: 4em;
+}
+
+.record_title {
+  font-size: 1.8em;
+}
+

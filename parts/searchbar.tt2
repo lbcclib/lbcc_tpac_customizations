@@ -88,7 +88,7 @@ END;
             l('at ');
             select_lib_label = l("Select search library");
             INCLUDE build_org_selector arialabel=select_lib_label 
-              id='search_org_selector' show_loc_groups=1
+              id='search_org_selector' show_loc_groups=0
         -%]
         </label>
         </div>

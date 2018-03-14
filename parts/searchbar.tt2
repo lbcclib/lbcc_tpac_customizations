@@ -63,13 +63,13 @@ END;
         <div id="search-filters">
         <label id="search_qtype_label" for="qtype">
         [%- 
-            l('with a ');
+            l('by ');
             INCLUDE "opac/parts/qtype_selector.tt2" id="qtype";
         -%]
         </label>
         <label id="search_itype_label" for="search_itype_selector">
         [%-
-            l('that is in ');
+            l('with format ');
             IF search.basic_config.type == 'attr';
                 INCLUDE "opac/parts/coded_value_selector.tt2"
                     attr=search.basic_config.group none_ok=1 
@@ -85,7 +85,7 @@ END;
         </label>
         <label id="search_locg_label" for="search_org_selector">
         [%- 
-            l('which is at ');
+            l('at ');
             select_lib_label = l("Select search library");
             INCLUDE build_org_selector arialabel=select_lib_label 
               id='search_org_selector' show_loc_groups=1

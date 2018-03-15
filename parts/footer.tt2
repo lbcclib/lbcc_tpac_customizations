@@ -5,7 +5,8 @@
     <a href="home">[% l('New search') %]</a> &nbsp;|&nbsp;
     <a href="advanced">[% l('Advanced search') %]</a> &nbsp;|&nbsp;
     <a href="browse">[% l('Browse the catalog') %]</a> &nbsp;|&nbsp;
-    <a href="http://linnbenton.edu">[% l('College Web site') %]</a>
+    <a href="https://library.linnbenton.edu">[% l('Library Web site') %]</a>
+    <a href="https://linnbenton.edu">[% l('College Web site') %]</a>
     </div>
     [% IF ctx.timing %]
     <div id="timing">

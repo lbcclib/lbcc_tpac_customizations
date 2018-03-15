@@ -3095,10 +3095,10 @@ padding: 10px;
 .metarecord_filter_header{padding-bottom: 5px;}
 
 #titleRow {
-  line-height: 4em;
+  line-height: 3em;
 }
 
 .record_title {
-  font-size: 1.8em;
+  font-size: 1.5em;
 }
 

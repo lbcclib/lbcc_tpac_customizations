@@ -98,15 +98,13 @@
                     -%]
 <th colspan="3" id="titleRow">
 
+    <span class='search_result_number'>[% result_count; result_count = result_count + 1 %]. </span>
     <a class='record_title search_link' name='record_[% rec.id %]'
     href="[% record_url %]"
     [% html_text_attr('title', l('Display record details for "[_1]"', attrs.title)) %]>
     [% attrs.title | html %]</a>
 </th>
                         <tr class="result_table_row">
-                                            <td class="results_row_count" name="results_row_count">[%
-                                                    result_count; result_count = result_count + 1
-                                                %].</td>
                                             <td class='result_table_pic_header'>
                                                 <a href="[% record_url %]"><img alt="[% l('Book cover') %]"
                                                         name='item_jacket' class='result_table_pic' width="55"
@@ -454,7 +452,7 @@ END;
                                                             [% END %]
                                                         [% END %]
                                                         </div>
-                                                        [% IF ENV.OILS_CONTENT_CAFE_USER %]
+                                                        [% IF 0 %]
                                                         [% ident = attrs.isbn_clean || attrs.upc %]
                                                         <div class="results_aux_utils result_util">
                                                             <a target='_blank' 

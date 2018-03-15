@@ -393,7 +393,7 @@ text-decoration:none;
 
 .results_info_table tbody tr td a{
     color: [% css_colors.accent_light %];
-    font-size: .9em;
+    /*font-size: .9em;*/
     margin: 0 5px 0 0;
 }
 
@@ -2302,9 +2302,11 @@ font-weight: bold; color: [% css_colors.text_alert %];
 font-weight: bold;
 }
 
+/*
 .record_author {
 font-style: italic;
 }
+*/
 
 .password_message {
 padding-top: 1em;

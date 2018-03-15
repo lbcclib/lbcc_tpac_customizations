@@ -146,30 +146,7 @@ END;
 -%]
 
  
-                                                    <div>
-                                                        <a title="[% l("Perform an Author Search") %]"
-                                                                class="record_author"
-                                                                href="[%- 
-                                                                    authorquery = attrs.author | replace('[#"^$\+\-,\.:;&|\[\]()]', ' ');
-                                                                    mkurl(ctx.opac_root _ '/results', {qtype => 'author', query => authorquery}, general_search_parms.merge(expert_search_parms, browse_search_parms, facet_search_parms))
-                                                                    -%]" rel="nofollow" vocab="">[% attrs.author | html %]</a>
-[%-
-FOR entry IN attrs.graphic_authors;
-    FOR alt IN entry.graphic;
-        diratt = "";
-        IF alt.dir;
-            diratt = ' dir="' _ alt.dir _ '"';
-        END;
--%]
-<div class="graphic880"[% diratt %]>
-    [% alt.value | html %]
-</div>
-[%-
-    END;
-END;
--%]
 
-                                                    </div>
                                                     <div class='result_table_title_cell'>
                                                     [%- IF attrs.format_label; %]
                                                         [% FOR format IN attrs.all_formats %]
@@ -209,6 +186,34 @@ END;
                                                         </tr>
                                                            [% END %]
                                                         [% END %]
+                                                    [% IF attrs.author %]
+                                                    <tr>         <td>
+                                                                    <strong>[% l('Author:') %]</strong>
+                                                                </td>
+                                                                <td>
+                                                        <a title="[% l("Perform an Author Search") %]"
+                                                                class="record_author"
+                                                                href="[%- 
+                                                                    authorquery = attrs.author | replace('[#"^$\+\-,\.:;&|\[\]()]', ' ');
+                                                                    mkurl(ctx.opac_root _ '/results', {qtype => 'author', query => authorquery}, general_search_parms.merge(expert_search_parms, browse_search_parms, facet_search_parms))
+                                                                    -%]" rel="nofollow" vocab="">[% attrs.author | html %]</a>
+[%-
+FOR entry IN attrs.graphic_authors;
+    FOR alt IN entry.graphic;
+        diratt = "";
+        IF alt.dir;
+            diratt = ' dir="' _ alt.dir _ '"';
+        END;
+-%]
+<div class="graphic880"[% diratt %]>
+    [% alt.value | html %]
+</div>
+[%-
+    END;
+END;
+END;
+-%]
+</td></tr>
 
                                                         [%- IF show_detail_view -%]
                                                         <!-- These fields are visible when viewing the results page in 'detailed' mode -->

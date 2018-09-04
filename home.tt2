@@ -4,6 +4,5 @@
     ctx.metalinks.push('<link rel="canonical" href="' _ mkurl('', {}, 1) _ '" />');
     ctx.page_title = l("Home") %]
     <h2 class="sr-only">[% l('Catalog Home') %]</h2>
-    <div id="searchPusher">Library Catalog</div>
-    [% INCLUDE "opac/parts/searchbar_home.tt2" %]
+    [% INCLUDE "opac/parts/searchbar.tt2" is_home_page=1 %]
 [%- END %]

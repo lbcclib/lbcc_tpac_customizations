@@ -18,7 +18,7 @@
     <!--[% l('Please enter the following information:') %]-->
     <form method='post'>
         <div class='login-form-left'>
-            <label for='username_field' class="lbl1" >[% l('Student ID #') %]</label>
+            <label for='username_field' class="lbl1" >[% l('LBCC ID #') %]</label>
             <div class="input_bg">
                 <input type="text" id="username_field" name="username"
                                       onkeypress="javascript:{this.value=this.value.toUpperCase();}"
